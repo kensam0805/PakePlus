@@ -326,7 +326,7 @@ export default defineConfig({
                                 },
                                 { text: '窗口跳转', link: '/zh/question/jump' },
                                 {
-                                    text: '功能测试',
+                                    text: '演示网站',
                                     link: '/zh/question/webDemo',
                                 },
                             ],
