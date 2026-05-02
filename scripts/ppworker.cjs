@@ -144,8 +144,8 @@ const updateTauriConfig = (showName, version, id, tauriApi) => {
     console.log('updateTauriConfig success')
 }
 
-// update index.html
-const updateIndexHtml = (
+// update pppwd.html
+const updatePPPwdHtml = (
     startMethod,
     startPwd,
     pwdTitle,
@@ -158,7 +158,7 @@ const updateIndexHtml = (
     winConfig,
     isHtml
 ) => {
-    console.log('updateIndexHtml......')
+    console.log('updatePPPwdHtml......')
     const indexHtmlPath = path.join(__dirname, '../src/pppwd.html')
     const indexHtml = fs.readFileSync(indexHtmlPath, 'utf-8')
     const targetUrl = isHtml ? './index.html' : winConfig.url
@@ -174,7 +174,7 @@ const updateIndexHtml = (
         .replaceAll('pwdTheme', pwdTheme)
         .replaceAll('https://pakeplus.com/', targetUrl)
     fs.writeFileSync(indexHtmlPath, newIndexHtml)
-    console.log('updateIndexHtml success')
+    console.log('updatePPPwdHtml success')
 }
 
 // update init.rs
@@ -291,7 +291,7 @@ const main = async () => {
     // 创建 icon
     await createIcon(inputPath, tempOutputPath, icnsOutputPath)
     // 更新 index.html
-    updateIndexHtml(
+    updatePPPwdHtml(
         startMethod,
         startPwd,
         pwdTitle,
